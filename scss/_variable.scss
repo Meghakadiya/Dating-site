@@ -21,6 +21,11 @@ $danger-color: #dc3545;
   align-items: center;
 }
 
+@mixin inline-box-vr-center {
+  display: inline-flex;
+  align-items: center;
+}
+
 @mixin content-between {
   display: flex;
   justify-content: space-between;
@@ -42,6 +47,11 @@ $danger-color: #dc3545;
 @mixin content-align-start {
   display: flex;
   align-items: flex-start;
+}
+@mixin content-align-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @mixin text-ellipsis {
@@ -137,6 +147,7 @@ $value-0: 0px;
  $percentage-30: 30%;
  $percentage-35: 35%;
  $percentage-21: 21%;
+ $percentage-24: 24%;
  $percentage-25: 25%;
  $percentage-30: 30%;
  $percentage-39: 39%;
@@ -203,6 +214,7 @@ $value-0: 0px;
  );
  $borderRadius: (
    "value5": 5px,
+   "value14": 14px,
    "value20": 20px,
    "value10": 10px,
    "value50": 50%,

@@ -81,27 +81,128 @@ p {
 .middle-sec {
     .web-details {
         @include content-space-between;
+        margin-top: $value-40;
 
-        .middle-left-sec{
-            h2{
-                font-size: map-get($font-sizes,font-32);
-                color:$secondary-color;
+        .middle-left-sec {
+            h2 {
+                font-size: map-get($font-sizes, font-32);
+                color: $secondary-color;
             }
-            p{
-                color: rgba(0, 0, 0, 0.40);
+            p {
+                color: rgba(0, 0, 0, 0.4);
             }
 
-            .about-sec{
-              h4{
-                font-size: map-get($font-sizes, font-20);
-                color: #808080
-              }
+            .about-sec {
+                margin-top: $value-50;
+                h4 {
+                    font-size: map-get($font-sizes, font-20);
+                    color: #808080;
+                }
 
-              p{
-                color: $dark-color;
-                font-size: map-get($font-sizes, font-20);
-                font-weight: map-get($font-weights, "medium");
-              }
+                p {
+                    color: $dark-color;
+                    font-size: map-get($font-sizes, font-20);
+                    font-weight: map-get($font-weights, "medium");
+                }
+                .categories {
+                    padding-top: $value-40;
+                    .bg-top-cat {
+                        padding-top: $value-15;
+                        .category-img {
+                            @include inline-box-vr-center;
+                            gap: $value-13;
+                            padding: $value-5 $value-10;
+                            border-radius: $value-27;
+                            border: $value-1 solid $primary-color;
+                            margin-bottom: $value-25;
+                            margin-right: $value-20;
+                        }
+                    }
+                }
+
+                .info-sec {
+                    margin-bottom: $value-100;
+                    margin-top: $value-40;
+                    .box-info-purpal {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: $value-20;
+                        padding-top: $value-15;
+
+                        .info-boxes {
+                            background-color: $primary-color;
+                            border-radius: map-get($borderRadius, "value14");
+                            width: $percentage-100;
+                            padding: $value-40 $value-0;
+                            padding-bottom: $value-30;
+                            text-align: center;
+
+                            &.box-two {
+                                background-color: #8530d1;
+
+                                .info-image {
+                                    border-color: #9d59da;
+                                }
+                            }
+                            &.box-three {
+                                background-color: $secondary-color;
+
+                                .info-image {
+                                    border-color: #b57de7;
+                                }
+                            }
+                            &.box-four {
+                                background-color: #a473ce;
+
+                                .info-image {
+                                    border-color: #b68fd8;
+                                }
+                            }
+
+                            .info-image {
+                                @include content-center;
+                                background-color: $white-color;
+                                border-radius: $value-100;
+                                width: $value-70;
+                                height: $value-70;
+                                border: $value-7 solid #663494;
+                                margin: 0 auto;
+                                margin-bottom: $value-10;
+                            }
+
+                            p {
+                                font-size: map-get($font-sizes, font-16);
+                                font-weight: map-get($font-weights, "regular");
+                                color: $white-color;
+                                &.main-weight {
+                                    font-weight: map-get($font-weights, "bold");
+                                    padding-top: $value-2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .breadcrumbs {
+                @include box-vr-center;
+                margin-bottom: $value-100;
+                .hometown {
+                    color: #5c5c5c;
+                    padding-right: $value-15;
+                }
+
+                .arror-right {
+                    color: #934e00;
+                    padding-right: $value-15;
+                }
+
+                .bg-text-color {
+                    color: $primary-color;
+                    text-decoration: none;
+                    font-size: map-get($font-sizes, font-16);
+                    font-weight: map-get($font-weights, "medium");
+                }
             }
         }
         .middle-right-content {
@@ -119,7 +220,7 @@ p {
                 }
 
                 .bg-wishlist {
-                    margin-left: $value-25;
+                    margin-left: $value-30;
                     ul {
                         list-style: none;
 
